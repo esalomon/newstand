@@ -11,12 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150509231925) do
+ActiveRecord::Schema.define(version: 20170301121818) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
     t.string   "author"
     t.string   "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
