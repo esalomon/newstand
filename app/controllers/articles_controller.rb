@@ -1,4 +1,8 @@
 class ArticlesController < ApplicationController
+
+  before_action :require_user
+
+  skip_before_action :require_login, only: [:index]
   
   def index
     @articles = Article.all
